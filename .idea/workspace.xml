@@ -7,23 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c835fd5f-f669-46ee-b4da-d1d523bf31b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_8_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/estudante/EstudanteRegistrarBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/model/Estudante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/model/enums/Turno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/maratona_jsf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/maratona_jsf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maratona-jsf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/maratona-jsf.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/maratona_jsf/WEB-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/maratona_jsf/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/maratona_jsf/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/maratona_jsf/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +41,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Arthur Vila Nova &lt;arthurjvnb@yahoo.com.br&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -178,7 +166,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -201,12 +189,24 @@
       <workItem from="1575247638394" duration="28000" />
       <workItem from="1575289136964" duration="3880000" />
       <workItem from="1575409499813" duration="22000" />
-      <workItem from="1575935615531" duration="8623000" />
+      <workItem from="1575935615531" duration="8826000" />
     </task>
+    <task id="LOCAL-00001" summary="Implementacoes ate aula 06">
+      <created>1575944638324</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575944638324</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implementacoes ate aula 06" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementacoes ate aula 06" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="182" key="#JBoss_Server" timestamp="1575247066809">
@@ -229,6 +229,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="590" y="213" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1575246256059" />
+    <state x="558" y="119" key="CommitChangelistDialog2" timestamp="1575944636729">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="558" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1575944636729" />
     <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1575247031573">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -253,6 +257,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1575943815348" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1575944648576">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1575944648576" />
     <state x="661" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1575935982447">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
