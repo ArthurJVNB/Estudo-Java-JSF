@@ -4,8 +4,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
    <f:view>
-      <h:outputLabel value="Hello, world"/>
+      <p:importEnum type="br.com.devdojo.maratonajsf.model.enums.Turno"
+                    var="Turno"
+                    allSuffix="ALL_ENUM_VALUES" />
+
+      <h:outputLabel value="Hello, world"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante['nome']}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.sobrenome}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean['estudante']['sobrenome']}"/><br/>
+
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 == estudanteRegistrarBean.estudante.nota2}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2 &amp;&amp; estudanteRegistrarBean.estudante.nome.equals('Arthur')}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2 and estudanteRegistrarBean.estudante.nome.equals('Arthur')}"/><br/>
+
+      <h:outputText value="Comparação de notas (menor ou igual): "/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 le estudanteRegistrarBean.estudante.nota2}"/><br/>
+      <h:outputLabel value="Comparação de notas (menor que): "/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 lt estudanteRegistrarBean.estudante.nota2}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq 0 ? 'ZERO' : 'NAO EH ZERO'}"/><br/>
+      <h:outputLabel value="Aqui sera um exemplo de que nao funciona atribuicao de forma direta:"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 = 10}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome += ' nome extra'}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
+
+      <h:outputText value="Mostrando enum de estudante:"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno eq Turno.MATUTINO}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno.equals(Turno.MATUTINO)}"/><br/>
+      <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno eq Turno.VESPERTINO}"/><br/>
+
+      <!-- Palavras reservadas: and (&&), or (||), not (!), eq (==), ne (!=), lt (<), le (<=), gt (>), ge (>=), true, false, null, instanceof, empty, div, mod -->
+      <!-- Para comentarios nao aparecerem no inspecionamento da pagina (quando se clica em F12 pra ver o codigo na pagina pronta),
+      ver o que foi feito em web.xml (context-param).
+      Obs: O servidor precisa ser reiniciado para que essa alteracao tenha efeito -->
    </f:view>
 </html>

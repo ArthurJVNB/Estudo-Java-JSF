@@ -9,8 +9,8 @@
         <module name="maratona-jsf" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="maratona-jsf" target="1.5" />
+    <bytecodeTargetLevel target="13">
+      <module name="maratona-jsf" target="13" />
     </bytecodeTargetLevel>
   </component>
 </project>
