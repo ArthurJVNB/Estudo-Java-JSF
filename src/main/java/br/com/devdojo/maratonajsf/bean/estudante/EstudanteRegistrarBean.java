@@ -2,6 +2,7 @@ package br.com.devdojo.maratonajsf.bean.estudante;
 
 import br.com.devdojo.maratonajsf.model.Estudante;
 
+import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.*;
@@ -9,17 +10,72 @@ import java.util.*;
 import static java.util.Arrays.asList;
 
 @Named
+@ViewScoped
 public class EstudanteRegistrarBean implements Serializable {
     private Estudante estudante = new Estudante();
     private String nomesArray[] = {"DevDojo", "eh", "foda"};
     private List<String> nomesList = asList("Arthur", "Jorge", "Vila", "Nova", "Bezerra");
     private Set<String> nomesSet = new HashSet<>(asList("Primeiro", "Segundo", "Terceiro", "Quarto", "Quinto"));
     private Map<String, String> nomesMap = new HashMap<>();
+    private boolean mostrarNotas;
+    private boolean mostrarLink;
 
     {
         nomesMap.put("Primeiro", "Esse carinha eh o primeiro que coloquei");
         nomesMap.put("Segundo", "Esse carinha eh o segundo que coloquei");
         nomesMap.put("Terceiro", "Esse carinha eh o terceiro que coloquei");
+    }
+
+    public void executar() {
+        System.out.println("Fazendo busca no BD");
+        System.out.println("Processando os dados");
+        System.out.println("Exibindo os dados");
+    }
+
+    public void executar(String param) {
+        System.out.println("Fazendo busca no BD com o PARAMETRO: " + param);
+        System.out.println("Processando os dados");
+        System.out.println("Exibindo os dados");
+    }
+
+    public String executarRetorno(String param) {
+        return "Ola! Eu sou o " + param;
+    }
+
+    public String irParaIndex2() {
+        return "index2";
+    }
+
+    public void exibirNotas() {
+        this.mostrarNotas = true;
+    }
+
+    public void esconderNotas() {
+        this.mostrarNotas = false;
+    }
+
+    public void exibirLink() {
+        this.mostrarLink = true;
+    }
+
+    public void esconderLink() {
+        this.mostrarLink = false;
+    }
+
+    public boolean isMostrarNotas() {
+        return mostrarNotas;
+    }
+
+    public void setMostrarNotas(boolean mostrarNotas) {
+        this.mostrarNotas = mostrarNotas;
+    }
+
+    public boolean isMostrarLink() {
+        return mostrarLink;
+    }
+
+    public void setMostrarLink(boolean mostrarLink) {
+        this.mostrarLink = mostrarLink;
     }
 
     public Map<String, String> getNomesMap() {

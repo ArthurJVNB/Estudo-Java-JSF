@@ -6,7 +6,11 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-<f:view>
+
+<h:head>
+
+</h:head>
+<h:body>
     <p:importEnum type="br.com.devdojo.maratonajsf.model.enums.Turno"
                   var="Turno"
                   allSuffix="ALL_ENUM_VALUES"/>
@@ -17,17 +21,21 @@
     <h:outputLabel value="#{estudanteRegistrarBean.estudante.sobrenome}"/><br/>
     <h:outputLabel value="#{estudanteRegistrarBean['estudante']['sobrenome']}"/><br/>
 
-    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2}"/><br/>
-    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 == estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel
+            value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel
+            value="#{estudanteRegistrarBean.estudante.nota1 == estudanteRegistrarBean.estudante.nota2}"/><br/>
     <h:outputLabel
             value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2 &amp;&amp; estudanteRegistrarBean.estudante.nome.equals('Arthur')}"/><br/>
     <h:outputLabel
             value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2 and estudanteRegistrarBean.estudante.nome.equals('Arthur')}"/><br/>
 
     <h:outputText value="Comparação de notas (menor ou igual): "/>
-    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 le estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel
+            value="#{estudanteRegistrarBean.estudante.nota1 le estudanteRegistrarBean.estudante.nota2}"/><br/>
     <h:outputLabel value="Comparação de notas (menor que): "/>
-    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 lt estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel
+            value="#{estudanteRegistrarBean.estudante.nota1 lt estudanteRegistrarBean.estudante.nota2}"/><br/>
     <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq 0 ? 'ZERO' : 'NAO EH ZERO'}"/><br/>
     <h:outputLabel value="Aqui sera um exemplo de que nao funciona atribuicao de forma direta:"/><br/>
     <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 = 10}"/><br/>
@@ -91,5 +99,77 @@
     <ui:repeat value="#{estudanteRegistrarBean.nomesMap.entrySet().toArray()}" var="entry">
         <h:outputLabel value="#{entry.key} - #{entry.value}"/><br/>
     </ui:repeat>
-</f:view>
+
+    <!-- Chamada de metodo -->
+    #{estudanteRegistrarBean.executar()}
+    #{estudanteRegistrarBean.executar('ihuu')}
+    #{estudanteRegistrarBean.executar("ihuuoow")}
+    #{estudanteRegistrarBean.executar(estudanteRegistrarBean.estudante.nome)}
+    #{estudanteRegistrarBean.executarRetorno(estudanteRegistrarBean.estudante.nome)}
+    #{estudanteRegistrarBean.executarRetorno('Goku')}<br/>
+    <h:commandButton value="Esse botao vai conseguir ir para canto nenhum"
+                     action="#{estudanteRegistrarBean.irParaIndex2()}"/>
+    <h:commandButton value="Esse botao tambem nao vai conseguir ir para canto nenhum" action="index2"/><br/>
+    <h:form>
+        <h:commandButton value="Esse botao vai conseguir ir para index2"
+                         action="#{estudanteRegistrarBean.irParaIndex2()}"/>
+        <h:commandButton value="Esse botao tambem vai conseguir ir para index2" action="index2"/><br/>
+
+        <!-- passando valores com EL para funcoes JS -->
+        <h:commandButton value="Soltar magia" onclick="fazMagica('boom!')"/><br/>
+        <h:commandButton value="Alert Nome" onclick="alertNome('#{estudanteRegistrarBean.estudante.nome}')"/>
+    </h:form>
+
+    <!-- Imprimindo CSS com Expression Language (esse ultimo eh o que tenho usado ate agora) -->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesList}" var="nome" varStatus="status">
+        <h:outputLabel value="#{nome}" style="color: #{status.index mod 2 == 0 ? 'red' : 'green'}"/><br/>
+    </ui:repeat>
+    <br/>
+
+    <h:form id="form">
+        <!-- Botoes usando AJAX -->
+        <h:commandButton value="Exibir notas">
+            <f:ajax listener="#{estudanteRegistrarBean.exibirNotas()}" render="notasGrid"/>
+        </h:commandButton>
+        <h:commandButton value="Esconder notas">
+            <f:ajax render="notasGrid" listener="#{estudanteRegistrarBean.esconderNotas()}"/>
+        </h:commandButton>
+
+        <!-- A parte que o AJAX ira requisitar (preciso dizer isso no "render" dele) -->
+        <h:panelGrid id="notasGrid">
+            <h:outputText value="#{estudanteRegistrarBean.estudante.nome}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.sobrenome}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.turno}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.nota1}"
+                          rendered="#{estudanteRegistrarBean.mostrarNotas}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.nota2}"
+                          rendered="#{estudanteRegistrarBean.mostrarNotas}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.nota3}"
+                          rendered="#{estudanteRegistrarBean.mostrarNotas}"/>
+        </h:panelGrid>
+
+        <h:commandButton value="Exibir link">
+            <f:ajax listener="#{estudanteRegistrarBean.exibirLink()}" render="pgLink"/>
+        </h:commandButton>
+        <h:commandButton value="Esconder link">
+            <f:ajax listener="#{estudanteRegistrarBean.esconderLink()}" render="pgLink"/>
+        </h:commandButton>
+        <h:panelGroup id="pgLink">
+            <ui:fragment id="fragmentLink" rendered="#{estudanteRegistrarBean.mostrarLink}">
+                <a href="www.google.com.br" target="_blank">www.google.com.br</a>
+            </ui:fragment>
+        </h:panelGroup>
+    </h:form>
+</h:body>
+
+<script type="text/javascript">
+    function fazMagica(magica) {
+        alert(magica);
+    }
+
+    function alertNome(nome) {
+        alert(nome);
+    }
+</script>
+
 </html>
