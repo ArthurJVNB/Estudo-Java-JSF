@@ -7,6 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c835fd5f-f669-46ee-b4da-d1d523bf31b4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/estudante/EstudanteRegistrarBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/estudante/EstudanteRegistrarBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +191,8 @@
       <workItem from="1575247638394" duration="28000" />
       <workItem from="1575289136964" duration="3880000" />
       <workItem from="1575409499813" duration="22000" />
-      <workItem from="1575935615531" duration="8826000" />
+      <workItem from="1575935615531" duration="8878000" />
+      <workItem from="1576075274003" duration="3265000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacoes ate aula 06">
       <created>1575944638324</created>
@@ -198,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575944638324</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implementacoes ate aula 06">
+      <created>1575944775524</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575944775524</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,49 +231,63 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1575293722651" />
-    <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1575942349244">
+    <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1576077781766">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1575942349244" />
+    <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576077781766" />
     <state x="590" y="213" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1575246256059">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="590" y="213" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1575246256059" />
-    <state x="558" y="119" key="CommitChangelistDialog2" timestamp="1575944636729">
+    <state x="558" y="119" key="CommitChangelistDialog2" timestamp="1575944774643">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="558" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1575944636729" />
+    <state x="558" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1575944774643" />
     <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1575247031573">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1575247031573" />
-    <state width="1618" height="266" key="GridCell.Tab.0.bottom" timestamp="1575943869083">
+    <state width="1618" height="266" key="GridCell.Tab.0.bottom" timestamp="1576078547608">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1618" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575943869083" />
-    <state width="1618" height="266" key="GridCell.Tab.0.center" timestamp="1575943869083">
+    <state width="1618" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575944814583" />
+    <state width="1618" height="266" key="GridCell.Tab.0.bottom/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576078547608" />
+    <state width="1618" height="266" key="GridCell.Tab.0.center" timestamp="1576078547608">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1618" height="266" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575943869083" />
-    <state width="1618" height="266" key="GridCell.Tab.0.left" timestamp="1575943869083">
+    <state width="1618" height="266" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575944814583" />
+    <state width="1618" height="266" key="GridCell.Tab.0.center/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576078547608" />
+    <state width="1618" height="266" key="GridCell.Tab.0.left" timestamp="1576078547608">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1618" height="266" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575943869083" />
-    <state width="1618" height="266" key="GridCell.Tab.0.right" timestamp="1575943869083">
+    <state width="1618" height="266" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575944814583" />
+    <state width="1618" height="266" key="GridCell.Tab.0.left/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576078547608" />
+    <state width="1618" height="266" key="GridCell.Tab.0.right" timestamp="1576078547608">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1618" height="266" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575943869083" />
+    <state width="1618" height="266" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575944814583" />
+    <state width="1618" height="266" key="GridCell.Tab.0.right/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576078547608" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1575943815348">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1575943815348" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1575944648576">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1575944782515">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1575944648576" />
-    <state x="661" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1575935982447">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1575944782515" />
+    <state x="661" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1576078639101">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="661" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1575935982447" />
+    <state x="661" y="348" key="com.intellij.ide.util.TipDialog/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576078639101" />
+    <state x="769" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576076165036">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="769" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576076165036" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1576077490693">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576077490693" />
   </component>
 </project>

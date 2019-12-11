@@ -6,42 +6,90 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-   <f:view>
-      <p:importEnum type="br.com.devdojo.maratonajsf.model.enums.Turno"
-                    var="Turno"
-                    allSuffix="ALL_ENUM_VALUES" />
+<f:view>
+    <p:importEnum type="br.com.devdojo.maratonajsf.model.enums.Turno"
+                  var="Turno"
+                  allSuffix="ALL_ENUM_VALUES"/>
 
-      <h:outputLabel value="Hello, world"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante['nome']}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.sobrenome}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean['estudante']['sobrenome']}"/><br/>
+    <h:outputLabel value="Hello, world"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante['nome']}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.sobrenome}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean['estudante']['sobrenome']}"/><br/>
 
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 == estudanteRegistrarBean.estudante.nota2}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2 &amp;&amp; estudanteRegistrarBean.estudante.nome.equals('Arthur')}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2 and estudanteRegistrarBean.estudante.nome.equals('Arthur')}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 == estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel
+            value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2 &amp;&amp; estudanteRegistrarBean.estudante.nome.equals('Arthur')}"/><br/>
+    <h:outputLabel
+            value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2 and estudanteRegistrarBean.estudante.nome.equals('Arthur')}"/><br/>
 
-      <h:outputText value="Comparação de notas (menor ou igual): "/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 le estudanteRegistrarBean.estudante.nota2}"/><br/>
-      <h:outputLabel value="Comparação de notas (menor que): "/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 lt estudanteRegistrarBean.estudante.nota2}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq 0 ? 'ZERO' : 'NAO EH ZERO'}"/><br/>
-      <h:outputLabel value="Aqui sera um exemplo de que nao funciona atribuicao de forma direta:"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 = 10}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome += ' nome extra'}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
+    <h:outputText value="Comparação de notas (menor ou igual): "/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 le estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel value="Comparação de notas (menor que): "/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 lt estudanteRegistrarBean.estudante.nota2}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq 0 ? 'ZERO' : 'NAO EH ZERO'}"/><br/>
+    <h:outputLabel value="Aqui sera um exemplo de que nao funciona atribuicao de forma direta:"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 = 10}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome += ' nome extra'}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
 
-      <h:outputText value="Mostrando enum de estudante:"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno eq Turno.MATUTINO}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno.equals(Turno.MATUTINO)}"/><br/>
-      <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno eq Turno.VESPERTINO}"/><br/>
+    <h:outputText value="Mostrando enum de estudante:"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno eq Turno.MATUTINO}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno.equals(Turno.MATUTINO)}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno eq Turno.VESPERTINO}"/><br/>
 
-      <!-- Palavras reservadas: and (&&), or (||), not (!), eq (==), ne (!=), lt (<), le (<=), gt (>), ge (>=), true, false, null, instanceof, empty, div, mod -->
-      <!-- Para comentarios nao aparecerem no inspecionamento da pagina (quando se clica em F12 pra ver o codigo na pagina pronta),
-      devemos colocar uma configuracao dentro do web.xml (ver o que foi feito em web.xml, em context-param).
-      Obs: O servidor precisa ser reiniciado para que essa alteracao tenha efeito -->
-   </f:view>
+    <!-- Palavras reservadas: and (&&), or (||), not (!), eq (==), ne (!=), lt (<), le (<=), gt (>), ge (>=), true, false, null, instanceof, empty, div, mod -->
+    <!-- Para comentarios nao aparecerem no inspecionamento da pagina (quando se clica em F12 pra ver o codigo na pagina pronta),
+    devemos colocar uma configuracao dentro do web.xml (ver o que foi feito em web.xml, em context-param).
+    Obs: O servidor precisa ser reiniciado para que essa alteracao tenha efeito -->
+
+    <!-- Arrays -->
+    <h:outputLabel
+            value="#{estudanteRegistrarBean.nomesArray[0]} #{estudanteRegistrarBean.nomesArray[1]} #{estudanteRegistrarBean.nomesArray[2]}"/><br/>
+    <!-- ui: repeat array -->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesArray}" var="nomeDaVariavel">
+        <h:outputLabel value="#{nomeDaVariavel}"/><br/>
+    </ui:repeat>
+
+    <!-- List -->
+    <!-- forma nao recomendada -->
+    <h:outputLabel
+            value="#{estudanteRegistrarBean.nomesList[0]} #{estudanteRegistrarBean.nomesList[1]} #{estudanteRegistrarBean.nomesList[2]}"/><br/>
+    <!-- forma recomendada -->
+    <h:outputLabel
+            value="#{estudanteRegistrarBean.nomesList.get(0)} #{estudanteRegistrarBean.nomesList.get(1)} #{estudanteRegistrarBean.nomesList.get(2)}"/><br/>
+    <!-- ui: repeat list -->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesList}" var="nome">
+        <h:outputLabel value="#{nome}"/><br/>
+    </ui:repeat>
+
+    <!-- Set -->
+    <!-- ui: repeat set -->
+    <h:outputLabel value="------------ Set -------------"/><br/>
+    <!-- a partir do JSF 2.3 essa forma funciona, mas antes ele so fazia um toString() dos valores -->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesSet}" var="nome">
+        <h:outputLabel value="#{nome}"/><br/>
+    </ui:repeat>
+    <!-- ate a versao JSF 2.2 era essa a forma pra ele pegar corretamente valor por valor -->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesSet.toArray()}" var="nome">
+        <h:outputLabel value="#{nome}"/><br/>
+    </ui:repeat>
+
+    <!-- Map -->
+    <h:outputLabel value="----------- Map ---------------"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.nomesMap.get('Primeiro')}"/><br/>
+    <h:outputLabel value="#{estudanteRegistrarBean.nomesMap}"/><br/>
+    <!-- ui: repeat map -->
+    <!-- a partir da versao 2.3 -->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesMap.entrySet()}" var="entry">
+        <h:outputLabel value="#{entry.key} - #{entry.value}"/><br/>
+    </ui:repeat>
+    <!-- ate a versao 2.2 -->
+    <ui:repeat value="#{estudanteRegistrarBean.nomesMap.entrySet().toArray()}" var="entry">
+        <h:outputLabel value="#{entry.key} - #{entry.value}"/><br/>
+    </ui:repeat>
+</f:view>
 </html>
