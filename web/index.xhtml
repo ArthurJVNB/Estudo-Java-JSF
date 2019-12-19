@@ -5,12 +5,16 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
       xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 
 </h:head>
 <h:body>
+    <c:set var="minhaVariavel" value="#{1}"/>
+    <c:set var="minhaLista" value="#{[1,2,3,4,5]}"/>
+
     <p:importEnum type="br.com.devdojo.maratonajsf.model.enums.Turno"
                   var="Turno"
                   allSuffix="ALL_ENUM_VALUES"/>
@@ -160,6 +164,52 @@
             </ui:fragment>
         </h:panelGroup>
     </h:form>
+
+    <!--Lambdas-->
+    #{(soma -> soma + num)(10)}<br/>
+    #{((v1, v2, v3) -> v1 * v2 * v3)(2, 2, 2)}<br/>
+    #{(x -> x * x * x)(2)}<br/>
+    #{cubo = (x -> x* x * x); cubo(2)}<br/> <!--Aqui eh a forma que o lambda foi pensado para ser usado no EL-->
+    <!--#{cubo = (x -> x * x * x)}<br/>-->
+    <!--#{cubo(10)}-->
+    <h:form>
+        <h:commandButton value="Calcular cubo"
+                         actionListener="#{estudanteRegistrarBean.calcularCubo((x -> x*x*x), 2)}"/>
+    </h:form>
+
+    <!--Lists-->
+    <ui:repeat value="#{['Primeiro', 'Segundo', 'Terceiro']}" var="list">
+        #{list}
+    </ui:repeat>
+    <br/>
+    <!--Set-->
+    <ui:repeat value="#{{'Primeiro', 'Segundo', 'Terceiro', 'Primeiro'}}" var="set">
+        #{set}
+    </ui:repeat>
+    <br/>
+    <!--Map-->
+    <ui:repeat value="#{{'Chave 1':'Valor 1','Chave 2':'Valor 2'}}" var="map">
+        #{map}
+        <!--Abaixo eu nao sei porque nao esta pegando-->
+        <!--<ui:repeat value="#{map.entrySet().toArray()}" var="entry">-->
+        <!--#{entry.key} - #{entry.set}-->
+        <!--</ui:repeat>-->
+    </ui:repeat>
+    <br/>
+    <!--Stream-->
+    <ui:repeat value="#{[1,2,3,4,5,6,7,8,9,10].stream().filter(v -> v>5).toList()}" var="result">
+        #{result}
+    </ui:repeat>
+    <br/>
+
+    <!--Alguns exemplos usando uma variavel que criei la em cima-->
+    <ui:repeat value="#{minhaLista.stream().filter(v -> v>2).toList()}" var="result">
+        #{result}
+    </ui:repeat>
+    <br/>
+    #{minhaLista.stream().average().get()}<br/> <!--Aqui to tirando a media dessa lista que criei-->
+    #{minhaLista.stream().sum()}<br/> <!--Aqui to fazendo a soma dessa lista-->
+    #{minhaLista.stream().filter(v -> v>2).sum()}<br/> <!--Aqui to fazendo a soma dessa lista, mas so com os valores que passaram no filtro-->
 </h:body>
 
 <script type="text/javascript">

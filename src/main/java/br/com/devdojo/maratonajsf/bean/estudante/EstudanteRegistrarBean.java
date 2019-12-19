@@ -2,6 +2,8 @@ package br.com.devdojo.maratonajsf.bean.estudante;
 
 import br.com.devdojo.maratonajsf.model.Estudante;
 
+import javax.el.LambdaExpression;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -13,7 +15,7 @@ import static java.util.Arrays.asList;
 @ViewScoped
 public class EstudanteRegistrarBean implements Serializable {
     private Estudante estudante = new Estudante();
-    private String nomesArray[] = {"DevDojo", "eh", "foda"};
+    private String[] nomesArray = {"DevDojo", "eh", "foda"};
     private List<String> nomesList = asList("Arthur", "Jorge", "Vila", "Nova", "Bezerra");
     private Set<String> nomesSet = new HashSet<>(asList("Primeiro", "Segundo", "Terceiro", "Quarto", "Quinto"));
     private Map<String, String> nomesMap = new HashMap<>();
@@ -60,6 +62,11 @@ public class EstudanteRegistrarBean implements Serializable {
 
     public void esconderLink() {
         this.mostrarLink = false;
+    }
+
+    public void calcularCubo(LambdaExpression le, long value) {
+        long result = (long) le.invoke(FacesContext.getCurrentInstance().getELContext(), value);
+        System.out.println(result);
     }
 
     public boolean isMostrarNotas() {
