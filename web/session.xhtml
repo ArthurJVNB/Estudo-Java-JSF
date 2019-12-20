@@ -8,6 +8,7 @@
 <h:head>
     <h:body>
         <h:form>
+            <h:outputText value="#{testApplicationBean.categorias}"/><br/>
             <h:outputText value="#{testSessionBean.personagemSelecionado}"/><br/>
             <h:commandButton value="Selecionar Personagem" actionListener="#{testSessionBean.selecionarPersonagem()}"/>
             <h:commandButton value="Selecionar Personagem Forward" action="session2"/>

@@ -8,6 +8,9 @@
 <h:head>
     <h:body>
         <h:form>
+            <h:outputText value="#{testApplicationBean.categorias}"/>
+            <h:commandButton value="Colocar categoria FPS" actionListener="#{testApplicationBean.colocarFPS()}"/>
+            <h:commandButton value="Tirar categoria FPS" actionListener="#{testApplicationBean.tirarFPS()}"/><br/>
             <h:outputText value="#{testViewBean.personagemSelecionado}"/><br/>
             <h:commandButton value="Selecionar Personagem" actionListener="#{testViewBean.selecionarPersonagem()}"/>
             <h:commandButton value="Selecionar Personagem Forward"
