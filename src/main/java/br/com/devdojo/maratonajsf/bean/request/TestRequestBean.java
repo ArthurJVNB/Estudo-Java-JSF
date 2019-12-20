@@ -14,7 +14,7 @@ import static java.util.Arrays.asList;
 // @Named permite que essa classe possa ser acessada no view pelos Expression Languages - escrevendo #{testRequestBean.algumMetodo()}
 @RequestScoped
 // Observar que @RequestScoped é importado do pagote javax.enterprise.context. Isso é importante, pois existe uma versão
-// mais antiga que é do pacote javax.faces.context, mantida apenas por retrocompatibilidade.
+// mais antiga que é do pacote javax.faces.bean, mantida apenas por retrocompatibilidade.
 // O RequestScoped diz para o sistema que o objeto criado com essa classe apenas continuará existindo durante um pedido.
 // Após o pedido ao servidor, o objeto é mandado pro Garbage Collector e numa próxima utilização, ou requisição, será
 // criado um novo objeto. Se a intenção é apenas exibir dados para o usuário, sem precisar usar esses dados novamente pra

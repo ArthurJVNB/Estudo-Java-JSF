@@ -25,7 +25,7 @@ import static java.util.Arrays.asList;
 //          sem necessidade. Só se deve usar o escopo de sessão apenas quando é necessário de fato, e não apenas como
 //          atalho para facilitar as implementações do sistema.
 // Obs: Mais uma vez, deve-se usar o @SessionScoped do pacote javax.enterprise.context. A versão que está no pacote
-//      javax.faces.context é antiga e só existe por fins de retrocompatibilidade.
+//      javax.faces.bean é antiga e só existe por fins de retrocompatibilidade.
 public class TestSessionBean implements Serializable {
     private List<String> personagens;
     private List<String> personagemSelecionado = new ArrayList<>();

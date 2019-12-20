@@ -7,12 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c835fd5f-f669-46ee-b4da-d1d523bf31b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/view/TestViewBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/view.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/view2.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/application/TestApplicationBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/request/TestRequestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/request/TestRequestBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/session/TestSessionBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/session/TestSessionBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +39,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="jsf" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -208,7 +206,7 @@
       <workItem from="1576681042000" duration="1429000" />
       <workItem from="1576709538832" duration="5115000" />
       <workItem from="1576859657981" duration="7372000" />
-      <workItem from="1576876191999" duration="764000" />
+      <workItem from="1576876191999" duration="1147000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacoes ate aula 06">
       <created>1575944638324</created>
@@ -259,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576873682662</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="implementacoes ate aula 14">
+      <created>1576877100889</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1576877100889</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +277,8 @@
     <MESSAGE value="Implementacoes ate aula 11" />
     <MESSAGE value="Implementacoes ate aula 12" />
     <MESSAGE value="implementacoes ate aula 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacoes ate aula 13" />
+    <MESSAGE value="implementacoes ate aula 14" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacoes ate aula 14" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="182" key="#JBoss_Server" timestamp="1575247066809">
@@ -300,10 +306,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="785" y="388" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576710697142" />
-    <state x="558" y="119" key="CommitChangelistDialog2" timestamp="1576873681494">
+    <state x="558" y="119" key="CommitChangelistDialog2" timestamp="1576877099716">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="558" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1576873681494" />
+    <state x="558" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1576877099716" />
     <state x="558" y="119" key="CommitChangelistDialog2/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576078664221" />
     <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1575247031573">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -349,10 +355,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1576861903023" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1576873686024">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1576877105613">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1576873686024" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1576877105613" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576078675860" />
     <state x="661" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1576876200134">
       <screen x="0" y="0" width="1920" height="1050" />
