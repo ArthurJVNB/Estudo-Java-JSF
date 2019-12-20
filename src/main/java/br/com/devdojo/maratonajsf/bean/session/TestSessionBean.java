@@ -15,9 +15,9 @@ import static java.util.Arrays.asList;
 @SessionScoped
 // O @SessionScoped indica que o objeto criado dessa classe vai durar enquanto a sessão com o servidor estiver ativa.
 // E quando a sessão é finalizada? Quando fechamos o brownser ou quando é chamado algum método em algum momento para
-// invalidar a sessão, como o método "logout()" criado abaixo, ou um timeout da sessão, configurado lá no web.xml.
-// Fechar a aba, ou abrir outras, continua viva a mesma sessão, ou seja, o(s) objeto(s) criado(s) com esse escopo
-// continuará(ão) vivo(s) e utilizável(is).
+// invalidar a sessão, como o método "logout()" criado abaixo, ou um timeout da sessão, configurado lá no web.xml (confi-
+// guração em minutos). Fechar a aba, ou abrir outras, continua viva a mesma sessão, ou seja, o(s) objeto(s) criado(s)
+// com esse escopo continuará(ão) vivo(s) e utilizável(is).
 // Isso é interessante para quando você quer inicializar atributos que serão usados por várias partes do seu sistema,
 // seja em outras beans, seja em outras views. Um exemplo bem comum é o login.
 // Cuidado: Todos os objetos de beans que são iniciados ficam na memória do servidor, logo, se for utilizado demasiadamente
