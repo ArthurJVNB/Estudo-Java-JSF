@@ -8,12 +8,12 @@
 <h:head>
     <h:body>
         <h:form>
-            <h:outputText value="#{tesRequestBean.personagemSelecionado}"/><br/>
-            <h:commandButton value="Selecionar Personagem" actionListener="#{tesRequestBean.selecionarPersonagem()}"/>
+            <h:outputText value="#{testRequestBean.personagemSelecionado}"/><br/>
+            <h:commandButton value="Selecionar Personagem" actionListener="#{testRequestBean.selecionarPersonagem()}"/>
             <h:commandButton value="Selecionar Personagem Forward"
-                             actionListener="#{tesRequestBean.selecionarPersonagem()}" action="index2"/>
+                             actionListener="#{testRequestBean.selecionarPersonagem()}" action="index2"/>
             <h:commandButton value="Selecionar Personagem Redirect"
-                             actionListener="#{tesRequestBean.selecionarPersonagem()}" action="index2?faces-redirect=true"/>
+                             actionListener="#{testRequestBean.selecionarPersonagem()}" action="index2?faces-redirect=true"/>
         </h:form>
     </h:body>
 </h:head>
