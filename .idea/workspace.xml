@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c835fd5f-f669-46ee-b4da-d1d523bf31b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devdojo/maratonajsf/bean/conversation/TestConversationBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/conversation.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/conversation2.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/error.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/conversation.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/conversation.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +177,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -214,7 +209,7 @@
       <workItem from="1576709538832" duration="5115000" />
       <workItem from="1576859657981" duration="7372000" />
       <workItem from="1576876191999" duration="2734000" />
-      <workItem from="1577547706058" duration="3707000" />
+      <workItem from="1577547706058" duration="3905000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacoes ate aula 06">
       <created>1575944638324</created>
@@ -286,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576878863801</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="implementacoes ate aula 16 (conversation scoped)">
+      <created>1577563051298</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1577563051298</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +304,8 @@
     <MESSAGE value="implementacoes ate aula 14" />
     <MESSAGE value="implementacoes ate aula 14 - correcoes das anotacoes" />
     <MESSAGE value="implementacoes ate aula 15" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacoes ate aula 15" />
+    <MESSAGE value="implementacoes ate aula 16 (conversation scoped)" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacoes ate aula 16 (conversation scoped)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="182" key="#JBoss_Server" timestamp="1575247066809">
@@ -330,10 +333,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="785" y="388" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576710697142" />
-    <state x="558" y="119" key="CommitChangelistDialog2" timestamp="1576878862781">
+    <state x="558" y="119" key="CommitChangelistDialog2" timestamp="1577563049589">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="558" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1576878862781" />
+    <state x="558" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1577563049589" />
     <state x="558" y="119" key="CommitChangelistDialog2/1920.-4.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1576078664221" />
     <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1575247031573">
       <screen x="0" y="0" width="1920" height="1050" />

@@ -24,7 +24,7 @@
                              action="conversation2?faces-redirect=true"/>
             <br/>
             <h:link value="Vai pra conversation 2" outcome="conversation2"
-                    rendered="#{!testConversationBean.conversation.transient}"> <!--Só existirá esse link se estiver havendo transação, caso a conversação seja transiente, não renderize isso-->
+                    rendered="#{!testConversationBean.conversation.transient}"> <!--Só existirá esse link se estiver havendo transação, caso a conversação seja transiente, não renderiza isso-->
                 <f:param name="cid" value="#{testConversationBean.conversation.id}"/>
             </h:link>
             <h:commandButton value="Finalizar Conversation Scoped"
