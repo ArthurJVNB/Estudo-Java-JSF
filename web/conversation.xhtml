@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <f:metadata>
+        <f:viewAction action="#{testConversationBean.init()}"/>
+    </f:metadata>
+    <h:body>
+        <h:form>
+            <h:outputText value="#{testApplicationBean.categorias}"/>
+            <h:commandButton value="Colocar categoria FPS" actionListener="#{testApplicationBean.colocarFPS()}"/>
+            <h:commandButton value="Tirar categoria FPS" actionListener="#{testApplicationBean.tirarFPS()}"/><br/>
+            <h:outputText value="#{testConversationBean.personagemSelecionado}"/><br/>
+            <h:commandButton value="Selecionar Personagem"
+                             actionListener="#{testConversationBean.selecionarPersonagem()}"/>
+            <h:commandButton value="Selecionar Personagem Forward"
+                             actionListener="#{testConversationBean.selecionarPersonagem()}" action="conversation2"/>
+            <h:commandButton value="Selecionar Personagem Request"
+                             actionListener="#{testConversationBean.selecionarPersonagem()}"
+                             action="conversation2?faces-redirect=true"/>
+            <br/>
+            <h:link value="Vai pra conversation 2" outcome="conversation2"
+                    rendered="#{!testConversationBean.conversation.transient}"> <!--Só existirá esse link se estiver havendo transação, caso a conversação seja transiente, não renderize isso-->
+                <f:param name="cid" value="#{testConversationBean.conversation.id}"/>
+            </h:link>
+            <h:commandButton value="Finalizar Conversation Scoped"
+                             action="#{testConversationBean.endConversation()}"/>
+        </h:form>
+    </h:body>
+</h:head>
+</html>
